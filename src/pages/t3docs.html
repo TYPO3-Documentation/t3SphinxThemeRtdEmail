@@ -1,0 +1,165 @@
+<style type="text/css">
+    body,
+    html,
+    .body {
+        background: #f3f3f3 !important;
+    }
+</style>
+
+<container>
+    <row>
+        <columns>
+            <h1>Dear project owner,</h1>
+            <p>
+                thank you very much for providing a TYPO3 project that contains documentation.
+                I am <a href="https://github.com/marble/Toolchain_RenderDocumentation" target="_blank">RenderDocumentation</a>,
+                the toolchain that builds documentation for you on the
+                <a href="http://docs.typo3.org/" target="_blank">TYPO3 documentation server</a>.
+            </p>
+
+            <h2>Your project</h2>
+            <p>Project: <strong id="id1">id1 Abcproject</strong>, version: <strong id="id2">id2 1.2.3</strong></p>
+            <p>The build has finished right now at <strong id="id3">id3 2017-01-31 12:33</strong>.</p>
+
+            <p>This was made: html, singlehtml, pdf, package_url, builddir</p>
+            <p>This failed or wasn't requested: html, singlehtml, pdf, package_url, builddir</p>
+
+        </columns>
+    </row>
+    <callout class="alert">
+        <row>
+            <columns>
+                <h2>Attention: You must do this once!</h2>
+                <p>
+                    The format of the settings has changed:
+                </p>
+                <p>
+                    <em>Settings.yml</em> is the OLD format.<br>
+                    <em>Settings.cfg</em> is the NEW format.
+                </p>
+                <p>
+                    I have found the old format but I did not find the new format in your project.
+                    So I generated a new <em>Settings.cfg</em> file from the old one.
+                    <a href="https://docs.typo3.org/typo3cms/drafts/github/T3DocumentationStarter/Public-Info-001/stable/_buildinfo/DearProjectOwner.txt"
+                       target="_blank">
+                        Please download the new file</a> and add it to your project as <em>PROJECT/Documentation/Settings.cfg</em>.
+                </p>
+                <p>
+                    At the moment we are in a phase of transition. So please keep the old Yaml file
+                    <em>Settings.yml</em> as well. Once it is not needed any more I will
+                    let you know.
+                </p>
+            </columns>
+        </row>
+    </callout>
+
+
+    <callout class="success">
+        <row>
+            <columns>
+                <h2>Congratulations!</h2>
+                <p>
+                    <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> did not report any errors or
+                    warnings.
+                    The list of <a href="#" target="_blank">warnings</a> is empty.
+                </p>
+            </columns>
+        </row>
+    </callout>
+    <callout class="warning">
+        <row>
+            <columns>
+                <h2>Warnings and errors</h2>
+                <p>
+                    <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> has reported issues.
+                    Please check the
+                    <a href="#" target="_blank">buildinfo</a> and especially the
+                    <a href="#" target="_blank">list of warnings.</a>
+                </p>
+            </columns>
+        </row>
+    </callout>
+    <row>
+        <columns>
+            <h2>Further information</h2>
+            <h4>Why do you get this mail?</h4>
+            <p>
+                I am sending this mail because I found an entry like
+            </p>
+            <pre>[notify]
+about_new_build = email-1, email-2, ...</pre>
+            <p>
+                in the settings file PROJECT/Documentation/Settings.cfg. Therefore I'm
+                sending this report to abc@mail.com, bcd@mail.com.
+            </p>
+            <hr>
+            <p>
+                I have looked around for email addresses in the project and found something.
+                So I'm sending this report to abc@email.com, bcd@email.com.
+            </p>
+            <hr>
+            <p>
+                Actually, I will not really send a mail in the end because I saw that
+                <em>no</em> in the list of possible receivers. But I still compile this info.
+            </p>
+            <hr>
+
+            <h4>Do this: Configure emailing</h4>
+            <p>
+                Add a setting to PROJECT/Documentation/Settings.cfg to specify what you want:
+            </p>
+            <pre>[notify]
+# have one or more receivers notified
+about_new_build = email-1 [, email-2, ...]
+
+|notify]
+# turn off notification mails like so:
+about_new_build = no</pre>
+
+
+            <hr>
+            <h4>Tips</h4>
+            <p>
+                Have an eye on the <a href="#" target="_blank">BUILDINFO</a> folder.
+                It contains information about the most recent build and only
+                changes when a new build is run.
+            </p>
+            <p>
+                <a href="#" target="_blank">HTML</a> is the usual output.
+                Most manuals on the server share the same static files.
+            </p>
+            <p>
+                <a href="#" target="_blank">SINGLEHTML</a>
+                has everything in one html file.
+            </p>
+            <p>
+                <a href="#" target="_blank">PDF</a>
+                is a pdf file generated from LaTeX - if everything went well.
+            </p>
+            <p>
+                <a href="#" target="_blank">PACKAGE</a>
+                is a zip archive with the HTML output. It is well suited
+                for offline reading since css and js files are included
+                and paths are relative. If a PDF was generated that file
+                is included too.
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+                Please join the
+                <a href="https://typo3.slack.com/messages/typo3-documentation/" target="_blank">Slack
+                    #typo3-documentation</a>
+                channel if you have questions. Visit <a href="https://forger.typo3.org/slack" target="_blank">forger</a>
+                for an invite.
+            </p>
+            <p>
+                You may as well send an email to the <a href="mailto:documentation@typo3.org" target="_blank">
+                TYPO3 Documentation Team.</a>
+            </p>
+            <p>Enjoy!</p>
+
+        </columns>
+    </row>
+
+
+</container>
