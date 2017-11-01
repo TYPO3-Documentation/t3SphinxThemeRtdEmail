@@ -28,163 +28,194 @@
             <div id="idDivMoreOnYourProject"></div>
         </columns>
     </row>
-    <div id="idCalloutSettingsFile">
-        <callout class="alert">
-            <row>
-                <columns>
-                    <h2>Attention: You must do this once!</h2>
-                    <p>
-                        The format of the settings has changed:
-                    </p>
-                    <p>
-                        <em>Settings.yml</em> is the OLD format.<br>
-                        <em>Settings.cfg</em> is the NEW format.
-                    </p>
-                    <p>
-                        I have found the old format but I did not find the new format in your project.
-                        So I generated a new <em>Settings.cfg</em> file from the old one.
-                        <a href="%(absurl_settings_cfg)s" target="_blank">
-                            Please download the new file
-                        </a> and add it to your project as <em>PROJECT/Documentation/Settings.cfg</em>.
-                    </p>
-                    <p>
-                        At the moment we are in a phase of transition. So please keep the old Yaml file
-                        <em>Settings.yml</em> as well. Once it is not needed any more I will
-                        let you know.
-                    </p>
-                </columns>
-            </row>
-        </callout>
-    </div>
+    <row>
+        <columns>
+            <div id="idCalloutSettingsFile">
+                <callout class="alert">
+                    <row>
+                        <columns>
+                            <h2>Attention: You must do this once!</h2>
+                            <p>
+                                The format of the settings has changed:
+                            </p>
+                            <p>
+                                <em>Settings.yml</em> is the OLD format.<br>
+                                <em>Settings.cfg</em> is the NEW format.
+                            </p>
+                            <p>
+                                I have found the old format but I did not find the new format in your project.
+                                So I generated a new <em>Settings.cfg</em> file from the old one.
+                                <a href="%(absurl_settings_cfg)s" target="_blank">
+                                    Please download the new file
+                                </a> and add it to your project as <em>PROJECT/Documentation/Settings.cfg</em>.
+                            </p>
+                            <p>
+                                At the moment we are in a phase of transition. So please keep the old Yaml file
+                                <em>Settings.yml</em> as well. Once it is not needed any more I will
+                                let you know.
+                            </p>
+                        </columns>
+                    </row>
+                </callout>
+            </div>
 
+            <div id="idDocumentationFromOpenOffice">
+                <callout class="alert">
+                    <row>
+                        <columns>
+                            <h2>Attention: You must do this once!</h2>
+                            <p>
+                                This rendering of the documentation has been automatically converted
+                                from the OpenOffice file since that was the only documentation given.
+                                OpenOffice format is DEPRECATED for years now. The conversion service
+                                may stop at any time.
+                            </p>
+                            <p>
+                                <strong>What you have to do:</strong>
+                            </p>
+                            <ol>
+                                <li>Open the <a href="%(absurl_buildinfo)s" target="_blank">buildinfo</a> folder.</li>
+                                <li>Download the file <a href="%(absurl_documentation_zip)s" target="_blank">Documentation.zip.GENERATED.zip</a>
+                                    that has been generated for you.</li>
+                                <li>Unpack.</li>
+                                <li>Add the unpacked folder './Documentation' with the new format to your project.</li>
+                                <li>Remove the old OpenOffice file './doc/manual.sxw' from your project.
+                                <li>Relax. There is no need to feel ashamed any more.<li>
+                            </ol>
+                        </columns>
+                    </row>
+                </callout>
+            </div>
 
-    <div id="idCalloutCongratulations">
-        <callout class="success calloutCongratulations">
-            <row>
-                <columns>
-                    <h2>Congratulations!</h2>
-                    <p>
-                        <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> did not report any errors or
-                        warnings.
-                        The list of <a href="%(absurl_warnings_txt)s" target="_blank">warnings</a> is empty.
-                    </p>
-                </columns>
-            </row>
-        </callout>
-    </div>
+            <div id="idCalloutCongratulations">
+                <callout class="success calloutCongratulations">
+                    <row>
+                        <columns>
+                            <h2>Congratulations!</h2>
+                            <p>
+                                <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> did not report any errors or
+                                warnings.
+                                The list of <a href="%(absurl_warnings_txt)s" target="_blank">warnings</a> is empty.
+                            </p>
+                        </columns>
+                    </row>
+                </callout>
+            </div>
 
-    <div id="idCalloutThereAreWarnings">
-        <callout class="warning">
-            <row>
-                <columns>
-                    <h2>Warnings and errors</h2>
-                    <p>
-                        <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> has reported issues.
-                        Please check the
-                        <a href="%(absurl_buildinfo)s" target="_blank">buildinfo</a> and especially the
-                        <a href="%(absurl_warnings_txt)s" target="_blank">list of warnings.</a>
-                    </p>
-                </columns>
-            </row>
-        </callout>
-    </div>
+            <div id="idCalloutThereAreWarnings">
+                <callout class="warning">
+                    <row>
+                        <columns>
+                            <h2>Warnings and errors</h2>
+                            <p>
+                                <a href="http://www.sphinx-doc.org/" target="_blank">Sphinx</a> has reported issues.
+                                Please check the
+                                <a href="%(absurl_buildinfo)s" target="_blank">buildinfo</a> and especially the
+                                <a href="%(absurl_warnings_txt)s" target="_blank">list of warnings.</a>
+                            </p>
+                        </columns>
+                    </row>
+                </callout>
+            </div>
 
-    <div id="idDivAboutThisMail">
-        <row>
-            <columns>
-                <h2>About this mail</h2>
+            <div id="idDivAboutThisMail">
+                <row>
+                    <columns>
+                        <h2>About this mail</h2>
 
-                <p id="idFoundSettingAboutEmailing">
-                    I have found an entry in the settings file <em>PROJECT/Documentation/Settings.cfg</em>
-                    about emailing.
-                    <span id="idSpanISendToReceivers">Therefore I'm sending this report to %(receivers_from_settings_cfg)s.</span>
-                    <span id="idSpanISawANo">I saw a 'no', so I'm not really going to send a mail.</span>
-                </p>
-                <p id="idFoundNoSettingAboutEmailing">
-                    I did not find an entry about emailing in the settings file <em>PROJECT/Documentation/Settings.cfg.</em>
-                </p>
-                <p id="idSendToProjectEmails">
-                    Therefore I have looked around for email addresses in the project and I am now sending this report
-                    to %(receivers_from_project)s.
-                </p>
+                        <p id="idFoundSettingAboutEmailing">
+                            I have found an entry in the settings file <em>PROJECT/Documentation/Settings.cfg</em>
+                            about emailing.
+                            <span id="idSpanISendToReceivers">Therefore I'm sending this report to %(receivers_from_settings_cfg)s.</span>
+                            <span id="idSpanISawANo">I saw a 'no', so I'm not really going to send a mail.</span>
+                        </p>
+                        <p id="idFoundNoSettingAboutEmailing">
+                            I did not find an entry about emailing in the settings file <em>PROJECT/Documentation/Settings.cfg.</em>
+                        </p>
+                        <p id="idSendToProjectEmails">
+                            Therefore I have looked around for email addresses in the project and I am now sending this report
+                            to %(receivers_from_project)s.
+                        </p>
 
-                <h4>To configure emailing</h4>
-                <p>
-                    Add a setting to PROJECT/Documentation/Settings.cfg to specify what you want.
-                    To have one or more receivers notified write:
-                </p>
-                <pre id="idPreNotify1">
-                    [notify]
-                    about_new_build = email-1 [, email-2, ...]
-                </pre>
-                <p>
-                    Or turn notification off by setting one email to 'no':
-                </p>
-                <pre id="idPreNotify2">
-                    [notify]
-                    about_new_build = no
-                </pre>
-            </columns>
-        </row>
-    </div>
+                        <h4>To configure emailing</h4>
+                        <p>
+                            Add a setting to PROJECT/Documentation/Settings.cfg to specify what you want.
+                            To have one or more receivers notified write:
+                        </p>
+                        <pre id="idPreNotify1">
+                            [notify]
+                            about_new_build = email-1 [, email-2, ...]
+                        </pre>
+                        <p>
+                            Or turn notification off by setting one email to 'no':
+                        </p>
+                        <pre id="idPreNotify2">
+                            [notify]
+                            about_new_build = no
+                        </pre>
+                    </columns>
+                </row>
+            </div>
 
-    <div id="idDivGeneralInformation">
-        <row>
-            <columns>
-                <h2>General information</h2>
-                <p>
-                    Have an eye on the <a id="idABUILDINFO" href="#" target="_blank">BUILDINFO</a> folder.
-                    It contains information about the most recent build and only
-                    changes when a new build is run.
-                </p>
-                <p>
-                    <a id="idAHTML" href="#" target="_blank">HTML</a> is the usual output.
-                    Most manuals on the server share the same static files.
-                </p>
-                <p>
-                    <a id="idASINGLEHTML" href="#" target="_blank">SINGLEHTML</a>
-                    has everything in one html file.
-                </p>
-                <p>
-                    <a id="idAPDF" href="#" target="_blank">PDF</a>
-                    is a file generated from LaTeX - if everything went well.
-                    Pdf generation has more restrictions than html and may not
-                    succeed where html still works.
-                </p>
-                <p>
-                    <a id="idAPACKAGE" href="#" target="_blank">PACKAGE</a>
-                    is a zip archive with the html output. It is well suited
-                    for offline reading since css and js files are included
-                    and paths are relative. If a pdf was generated that file
-                    is included too.
-                </p>
-            </columns>
-        </row>
-    </div>
+            <div id="idDivGeneralInformation">
+                <row>
+                    <columns>
+                        <h2>General information</h2>
+                        <p>
+                            Have an eye on the <a id="idABUILDINFO" href="#" target="_blank">BUILDINFO</a> folder.
+                            It contains information about the most recent build and only
+                            changes when a new build is run.
+                        </p>
+                        <p>
+                            <a id="idAHTML" href="#" target="_blank">HTML</a> is the usual output.
+                            Most manuals on the server share the same static files.
+                        </p>
+                        <p>
+                            <a id="idASINGLEHTML" href="#" target="_blank">SINGLEHTML</a>
+                            has everything in one html file.
+                        </p>
+                        <p>
+                            <a id="idAPDF" href="#" target="_blank">PDF</a>
+                            is a file generated from LaTeX - if everything went well.
+                            Pdf generation has more restrictions than html and may not
+                            succeed where html still works.
+                        </p>
+                        <p>
+                            <a id="idAPACKAGE" href="#" target="_blank">PACKAGE</a>
+                            is a zip archive with the html output. It is well suited
+                            for offline reading since css and js files are included
+                            and paths are relative. If a pdf was generated that file
+                            is included too.
+                        </p>
+                    </columns>
+                </row>
+            </div>
 
-    <div id="idRowContact">
-        <row>
-            <columns>
-                <h2>Contact</h2>
-                <p>
-                    Please join the
-                    <a href="https://typo3.slack.com/messages/typo3-documentation/" target="_blank">Slack #typo3-documentation</a>
-                    channel if you have questions. Visit <a href="https://forger.typo3.org/slack" target="_blank">forger</a>
-                    for an invite.
-                </p>
-                <p>
-                    You may as well send an email to the <a href="mailto:documentation@typo3.org" target="_blank">
-                    TYPO3 Documentation Team.</a>
-                </p>
-                <p>Regards,</p>
-                <p>
-                    <strong>RenderDocumentation</strong><br>
-                    Your friendly Toolchain Robot for rendering documentation
-                </p>
+            <div id="idRowContact">
+                <row>
+                    <columns>
+                        <h2>Contact</h2>
+                        <p>
+                            Please join the
+                            <a href="https://typo3.slack.com/messages/typo3-documentation/" target="_blank">Slack #typo3-documentation</a>
+                            channel if you have questions. Visit <a href="https://forger.typo3.org/slack" target="_blank">forger</a>
+                            for an invite.
+                        </p>
+                        <p>
+                            You may as well send an email to the <a href="mailto:documentation@typo3.org" target="_blank">
+                            TYPO3 Documentation Team.</a>
+                        </p>
+                        <p>Regards,</p>
+                        <p>
+                            <strong>RenderDocumentation</strong><br>
+                            Your friendly Toolchain Robot for rendering documentation
+                        </p>
 
-            </columns>
-        </row>
-    </div>
+                    </columns>
+                </row>
+            </div>
+        </columns>
+    </row>
 
 
 </container>
